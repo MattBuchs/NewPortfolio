@@ -1,0 +1,68 @@
+const CircleNavigator = ({
+    projects,
+    getCirclePosition,
+    handleCircleClick,
+    progress,
+    setIsPaused,
+    circleRefs,
+}) => {
+    const radius = 200; // Rayon du grand cercle
+    const positionX = 225;
+    const positionY = 225;
+    const smallCircleRadius = 9;
+
+    return (
+        <section
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            className="hidden md:block absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px]"
+        >
+            <svg width="450" height="450" xmlns="http://www.w3.org/2000/svg">
+                <circle
+                    cx={positionX}
+                    cy={positionY}
+                    r={radius}
+                    stroke="#c9bdbb"
+                    strokeWidth="1"
+                    fill="none"
+                />
+                <circle
+                    cx={positionX}
+                    cy={positionY}
+                    r={radius}
+                    stroke="#000"
+                    strokeWidth="10"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeDasharray={`0 ${2 * Math.PI * radius}`}
+                    strokeDashoffset={`${
+                        ((100 - progress) / 100) * (2 * Math.PI * radius) +
+                        0.25 * (2 * Math.PI * radius)
+                    }`}
+                />
+                {projects.map((project, index) => {
+                    const { x, y } = getCirclePosition(index);
+                    return (
+                        <g
+                            key={project.id}
+                            transform={`translate(${x}, ${y})`}
+                            className="cursor-pointer"
+                            onClick={() => handleCircleClick(index)}
+                        >
+                            <circle
+                                cx="0"
+                                cy="0"
+                                r={smallCircleRadius}
+                                fill="#c9bdbb"
+                                className="transition-transform transform hover:scale-150"
+                                ref={(el) => (circleRefs.current[index] = el)}
+                            />
+                        </g>
+                    );
+                })}
+            </svg>
+        </section>
+    );
+};
+
+export default CircleNavigator;
