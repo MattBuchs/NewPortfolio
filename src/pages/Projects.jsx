@@ -19,40 +19,40 @@ export default function Projects() {
                 title: "PlaySkroma",
                 paragraph: "",
                 img: "",
-                bgColorLeft: "",
-                bgColorRight: "",
+                bgColorLeft: "#89CFF0",
+                bgColorRight: "#aaf0d1",
             },
             {
                 id: 3,
                 title: "EscapeTime",
                 paragraph: "",
                 img: "",
-                bgColorLeft: "",
-                bgColorRight: "",
+                bgColorLeft: "#c02f10",
+                bgColorRight: "#f1f1f1",
             },
             {
                 id: 4,
                 title: "AngelsGame-Reservation",
                 paragraph: "",
                 img: "",
-                bgColorLeft: "",
-                bgColorRight: "",
+                bgColorLeft: "#89CFF0",
+                bgColorRight: "#aaf0d1",
             },
             {
                 id: 5,
                 title: "EnglishLearning",
                 paragraph: "",
                 img: "",
-                bgColorLeft: "",
-                bgColorRight: "",
+                bgColorLeft: "#c02f10",
+                bgColorRight: "#f1f1f1",
             },
             {
                 id: 6,
                 title: "DevCraftHub",
                 paragraph: "",
                 img: "",
-                bgColorLeft: "",
-                bgColorRight: "",
+                bgColorLeft: "#89CFF0",
+                bgColorRight: "#aaf0d1",
             },
         ],
         []
@@ -135,17 +135,33 @@ export default function Projects() {
     ]);
 
     const updateProject = (sectionRef, circleRef) => {
-        sectionRefs.current.forEach((el) => el.classList.remove("z-40"));
+        sectionRefs.current.forEach((el) => {
+            if (el.classList.contains("z-40")) {
+                el.classList.remove("z-40");
+                el.classList.remove("animate-fadeIn");
+                el.classList.add("z-30");
+            }
+        });
         circleRefs.current.forEach((el) =>
             el.classList.remove("animate-scaleUp")
         );
+
         if (sectionRef) {
             sectionRef.classList.add("z-40");
+            sectionRef.classList.add("animate-fadeIn");
         }
 
         if (circleRef) {
             circleRef.classList.add("animate-scaleUp");
         }
+
+        setTimeout(() => {
+            sectionRefs.current.forEach((el) => {
+                if (el.classList.contains("z-30")) {
+                    el.classList.remove("z-30");
+                }
+            });
+        }, 500);
     };
 
     const handleCircleClick = (index) => {

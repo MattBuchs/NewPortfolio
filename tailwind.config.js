@@ -8,9 +8,18 @@ export default {
                     "0%": { transform: "scale(1)" },
                     "100%": { transform: "scale(1.5)" },
                 },
+                fadeIn: {
+                    "0%": {
+                        opacity: "0",
+                    },
+                    100: {
+                        opacity: "1",
+                    },
+                },
             },
             animation: {
                 scaleUp: "scaleUp 0.3s forwards",
+                fadeIn: "fadeIn 0.5s ease-in-out forwards",
             },
         },
     },

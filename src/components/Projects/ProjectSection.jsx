@@ -2,12 +2,12 @@ const ProjectSection = ({ project, index, setIsPaused, sectionRefs }) => {
     return (
         <section
             className={`h-full w-full flex mb-4 absolute ${
-                index === 0 && "z-40"
+                index === 0 ? "z-40" : ""
             }`}
             ref={(el) => (sectionRefs.current[index] = el)}
         >
             <div
-                className="w-1/2 h-full bg-blue-200"
+                className="w-1/2 h-full"
                 style={{ background: project.bgColorLeft }}
             >
                 {index % 2 === 0 ? (
@@ -33,7 +33,7 @@ const ProjectSection = ({ project, index, setIsPaused, sectionRefs }) => {
                 )}
             </div>
             <div
-                className="w-1/2 h-full bg-green-200"
+                className="w-1/2 h-full"
                 style={{ background: project.bgColorRight }}
             >
                 {index % 2 !== 0 ? (
