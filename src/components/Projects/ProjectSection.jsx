@@ -28,7 +28,11 @@ const ProjectSection = ({ project, index, setIsPaused, sectionRefs }) => {
                     </div>
                 ) : (
                     <div className="w-full h-full flex justify-center items-center">
-                        <img src={project.img} alt="" className="w-4/5" />
+                        <img
+                            src={project.img}
+                            alt=""
+                            className={project.class}
+                        />
                     </div>
                 )}
             </div>
@@ -53,8 +57,12 @@ const ProjectSection = ({ project, index, setIsPaused, sectionRefs }) => {
                         </article>
                     </div>
                 ) : (
-                    <div className="w-full h-full flex justify-center items-center">
-                        <img src={project.img} alt="" className="w-4/5" />
+                    <div className="w-full h-full flex justify-center items-center relative">
+                        <img
+                            src={project.img}
+                            alt=""
+                            className={project.class}
+                        />
                     </div>
                 )}
             </div>

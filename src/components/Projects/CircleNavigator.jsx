@@ -9,7 +9,7 @@ const CircleNavigator = ({
     const radius = 200; // Rayon du grand cercle
     const positionX = 225;
     const positionY = 225;
-    const smallCircleRadius = 9;
+    const smallCircleRadius = 11;
 
     return (
         <section
@@ -22,16 +22,17 @@ const CircleNavigator = ({
                     cx={positionX}
                     cy={positionY}
                     r={radius}
-                    stroke="#c9bdbb"
-                    strokeWidth="1"
+                    stroke="#fff"
+                    strokeWidth="2"
                     fill="none"
+                    className="drop-shadow-custom-shadow"
                 />
                 <circle
                     cx={positionX}
                     cy={positionY}
                     r={radius}
                     stroke="#000"
-                    strokeWidth="10"
+                    strokeWidth="12"
                     fill="none"
                     strokeLinecap="round"
                     strokeDasharray={`0 ${2 * Math.PI * radius}`}
@@ -53,8 +54,8 @@ const CircleNavigator = ({
                                 cx="0"
                                 cy="0"
                                 r={smallCircleRadius}
-                                fill="#c9bdbb"
-                                className="transition-transform transform hover:scale-150"
+                                fill="#fff"
+                                className="transition-transform transform hover:scale-150 drop-shadow-custom-shadow-circle"
                                 ref={(el) => (circleRefs.current[index] = el)}
                             />
                         </g>
