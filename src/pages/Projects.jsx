@@ -47,9 +47,9 @@ export default function Projects() {
                 title: "EnglishLearning",
                 paragraph: "App pour apprendre l'anglais sous forme de card",
                 img: "/english.jpg",
-                bgColorLeft: "#e08c81",
+                bgColorLeft: "#c27470",
                 bgColorRight: "#f1f1f1",
-                class: "w-3/5 rounded absolute top-20 right-10 shadow",
+                class: "w-3/5 rounded absolute top-24 right-10 shadow",
             },
             {
                 id: 6,
