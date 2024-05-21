@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import ProjectSection from "../components/Projects/ProjectSection";
 import CircleNavigator from "../components/Projects/CircleNavigator";
 import ControlButton from "../components/Projects/ControlButton";
+import NavbarProjects from "../components/Header/Navbar-Projects";
 
 export default function Projects() {
     const projects = useMemo(
@@ -179,30 +180,35 @@ export default function Projects() {
     };
 
     return (
-        <div className="h-screen">
-            {projects.map((project, index) => (
-                <ProjectSection
-                    key={project.id}
-                    project={project}
-                    index={index}
-                    setIsPaused={setIsPaused}
-                    sectionRefs={sectionRefs}
-                />
-            ))}
+        <>
+            <NavbarProjects />
+            <main>
+                <div className="h-screen">
+                    {projects.map((project, index) => (
+                        <ProjectSection
+                            key={project.id}
+                            project={project}
+                            index={index}
+                            setIsPaused={setIsPaused}
+                            sectionRefs={sectionRefs}
+                        />
+                    ))}
 
-            <CircleNavigator
-                projects={projects}
-                getCirclePosition={getCirclePosition}
-                handleCircleClick={handleCircleClick}
-                progress={progress}
-                setIsPaused={setIsPaused}
-                circleRefs={circleRefs}
-            />
+                    <CircleNavigator
+                        projects={projects}
+                        getCirclePosition={getCirclePosition}
+                        handleCircleClick={handleCircleClick}
+                        progress={progress}
+                        setIsPaused={setIsPaused}
+                        circleRefs={circleRefs}
+                    />
 
-            <ControlButton
-                isPausedClicked={isPausedClicked}
-                setIsPausedClicked={setIsPausedClicked}
-            />
-        </div>
+                    <ControlButton
+                        isPausedClicked={isPausedClicked}
+                        setIsPausedClicked={setIsPausedClicked}
+                    />
+                </div>
+            </main>
+        </>
     );
 }
