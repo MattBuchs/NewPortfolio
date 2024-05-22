@@ -30,7 +30,7 @@ export default function Technos() {
                 circle at
                 ${mouseX}px
                 ${mouseY}px,
-                #ffffff55,
+                #ffffffa5,
                 #0000000f
             )
         `;
