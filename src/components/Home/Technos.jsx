@@ -43,7 +43,10 @@ export default function Technos() {
     };
 
     return (
-        <section className="max-w-[1250px] md:w-[90%] w-full h-full mx-auto relative">
+        <section
+            id="technos"
+            className="max-w-[1250px] md:w-[90%] w-full h-full mx-auto relative"
+        >
             <div className="py-20">
                 <h2 className="text-3xl font-semibold underline underline-offset-4 ml-14">
                     Technos

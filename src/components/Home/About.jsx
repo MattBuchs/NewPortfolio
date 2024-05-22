@@ -6,18 +6,16 @@ export default function About() {
                     À propos
                 </h2>
                 <p className="mt-8">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Illum in quos, est neque aut quo porro modi voluptates dolor
-                    quae iure tempore similique qui ut sint iste nam aspernatur.
-                    Ad exercitationem sapiente eos maxime accusamus sed sit.
-                    Voluptas, quas repellat optio libero, tenetur dolorem
-                    veritatis porro minus itaque hic nisi dolore laudantium
-                    numquam corrupti corporis amet odit aliquam nobis labore.
-                    Nam architecto totam harum incidunt quam cupiditate eaque
-                    velit sint odio, voluptate a temporibus quo cumque optio cum
-                    natus facere tenetur dolor id dolore sed praesentium nulla
-                    magni? Quas sequi veritatis repellendus culpa ut sed quaerat
-                    laborum aliquid a suscipit.
+                    À 21 ans, je suis en plein processus de reconversion
+                    professionnelle afin de me spécialiser dans le domaine du
+                    développement web. Suite à un bac +2 développeur web, obtenu
+                    grâce à la formation en ligne O&apos;clock, j&apos;ai
+                    consolidé mes connaissances dans plusieurs langages (HTML,
+                    CSS, JavaScript, SQL...), la manipulation de bases de
+                    données et l&apos;utilisation avancée d&apos;outils
+                    logiciels ainsi que du terminal. Mon ambition est de
+                    continuellement progresser et d&apos;explorer de nouvelles
+                    technologies.
                 </p>
             </div>
         </section>
