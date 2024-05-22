@@ -28,6 +28,9 @@ export default {
                 scaleUp: "scaleUp 0.3s forwards",
                 fadeIn: "fadeIn 0.5s ease-in-out forwards",
             },
+            fontFamily: {
+                vibes: ["Great Vibes, cursive"],
+            },
         },
     },
     variants: {

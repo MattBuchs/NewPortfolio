@@ -58,7 +58,12 @@ export default function Presentation() {
                 <div className="w-1/2 relative flex justify-center">
                     <div className="w-[70%] h-full rounded-lg shadow-lg relative">
                         <div className="card rounded-lg bg-slate-100">
-                            <img src="/me.png" alt="" className="w-full" />
+                            <img src="/img/me.png" alt="" className="w-full" />
+                            <img
+                                src="/img/light-accent-compressed.png"
+                                alt=""
+                                className="absolute -bottom-1/2 -left-[60%] min-w-[170%] -rotate-12"
+                            />
                         </div>
                     </div>
                 </div>

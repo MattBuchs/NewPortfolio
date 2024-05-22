@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export default function NavbarProjects() {
     return (
         <header className="absolute z-50 text-white flex justify-between items-center w-full h-12">
-            <h1 className="text-2xl font-semibold underline underline-offset-8 ml-8 drop-shadow">
+            <h1 className="text-2xl font-semibold underline underline-offset-8 ml-8 drop-shadow font-vibes mt-4">
                 Matt Buchs
             </h1>
 
