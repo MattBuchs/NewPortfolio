@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
     return (
-        <div>
+        <>
             <NavBar />
             <main>
                 <Presentation />
@@ -14,6 +14,6 @@ export default function Home() {
                 <Technos />
             </main>
             <Footer />
-        </div>
+        </>
     );
 }

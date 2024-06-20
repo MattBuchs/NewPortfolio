@@ -7,7 +7,10 @@ export default function BarLink({ isBarVisible }) {
             }`}
         >
             <ul className="flex">
-                <li className="bg-slate-400/70 hover:rounded-se hover:shadow h-20 w-[54px] translate-y-7 hover:translate-y-0 duration-200">
+                <li
+                    title="Linkedin"
+                    className="bg-slate-400/70 hover:rounded-se hover:shadow h-20 w-[54px] translate-y-7 hover:translate-y-0 duration-200"
+                >
                     <a
                         href="https://www.linkedin.com/in/matt-buchs/"
                         className="w-full h-full flex justify-center pt-3"
@@ -26,7 +29,10 @@ export default function BarLink({ isBarVisible }) {
                         </svg>
                     </a>
                 </li>
-                <li className="bg-slate-400/70 hover:rounded-t hover:shadow h-20 w-[54px] translate-y-7 hover:translate-y-0 duration-200">
+                <li
+                    title="Github"
+                    className="bg-slate-400/70 hover:rounded-t hover:shadow h-20 w-[54px] translate-y-7 hover:translate-y-0 duration-200"
+                >
                     <a
                         href="https://github.com/MattBuchs"
                         className="w-full h-full flex justify-center pt-3"
@@ -45,7 +51,10 @@ export default function BarLink({ isBarVisible }) {
                         </svg>
                     </a>
                 </li>
-                <li className="bg-slate-400/70 hover:rounded-t hover:shadow h-20 w-[54px] translate-y-7 hover:translate-y-0 duration-200">
+                <li
+                    title="Email"
+                    className="bg-slate-400/70 hover:rounded-t hover:shadow h-20 w-[54px] translate-y-7 hover:translate-y-0 duration-200"
+                >
                     <a
                         href="mailto:mattbuchs25@gmail.com"
                         className="w-full h-full flex justify-center pt-3"
@@ -69,7 +78,10 @@ export default function BarLink({ isBarVisible }) {
                         </svg>
                     </a>
                 </li>
-                <li className="bg-slate-400/70 rounded-se hover:rounded-t hover:shadow h-20 w-[54px] translate-y-7 hover:translate-y-0 duration-200">
+                <li
+                    title="CV"
+                    className="bg-slate-400/70 rounded-se hover:rounded-t hover:shadow h-20 w-[54px] translate-y-7 hover:translate-y-0 duration-200"
+                >
                     <a
                         href="/files/CV-MattBuchs.pdf"
                         className="w-full h-full flex justify-center pt-3"
