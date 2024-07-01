@@ -4,13 +4,15 @@ export default function Technos() {
     const cardRefs = useRef([]);
     const technos = [
         { id: 1, title: "JavaScript", img: "Javascript.png" },
-        { id: 2, title: "Node.js", img: "Node.png" },
-        { id: 3, title: "React", img: "React.png" },
-        { id: 4, title: "Tailwind", img: "Tailwind.png" },
-        { id: 5, title: "Sass", img: "Sass.png" },
-        { id: 6, title: "PostgreSQL", img: "Postgres.png" },
-        { id: 7, title: "MongoDB", img: "Mongo.png" },
-        { id: 8, title: "Git", img: "Git.png" },
+        { id: 2, title: "TypeScript", img: "Typescript.png" },
+        { id: 3, title: "Tailwind", img: "Tailwind.png" },
+        { id: 4, title: "Sass", img: "Sass.png" },
+        { id: 5, title: "React", img: "React.png" },
+        { id: 6, title: "Next.js", img: "Nextjs.png" },
+        { id: 7, title: "Node.js", img: "Node.png" },
+        { id: 8, title: "PostgreSQL", img: "Postgres.png" },
+        { id: 9, title: "MongoDB", img: "Mongo.png" },
+        { id: 10, title: "Git", img: "Git.png" },
     ];
 
     const rotateToMouse = (e, index) => {
