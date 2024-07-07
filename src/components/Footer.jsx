@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 export default function Footer() {
     return (
         <footer className="bg-slate-900 text-white">
-            <div className="max-w-[800px] md:w-[90%] w-full h-full mx-auto pt-6 pb-3 flex justify-between">
-                <nav className="pt-2">
+            <div className="max-w-[800px] w-full md:w-11/12 h-full mx-auto pt-6 md:pb-3 flex flex-col md:flex-row md:justify-between">
+                <nav className="pt-2 hidden md:block">
                     <ul className="flex flex-col items-center justify-start mx-2 text-lg">
                         <li className="mb-1 w-full">
                             <Link to="/" className="hover:underline">
@@ -36,10 +36,10 @@ export default function Footer() {
                         &copy; All rights reserved
                     </p>
                 </div>
-                <div className="flex mr-2">
+                <div className="flex mt-6 md:mt-0 md:mr-2 border-t md:border-0 border-slate-50/30">
                     <a
                         href="https://github.com/MattBuchs"
-                        className="w-full h-full flex justify-center pt-3 mr-1"
+                        className="w-full h-full flex justify-center pt-3 mr-1 border-r md:border-r-0 pb-3 md:pb-0 border-slate-50/30"
                         target="_blank"
                     >
                         <svg

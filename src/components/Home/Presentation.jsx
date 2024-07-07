@@ -47,9 +47,9 @@ export default function Presentation() {
     }, []);
 
     return (
-        <section className="max-w-[1250px] md:w-[90%] w-full h-full mx-auto relative">
-            <div className="px-5 flex items-center h-screen">
-                <article className="w-1/2 px-10 mb-4">
+        <section className="max-w-[1250px] md:w-[90%] h-full w-full mx-auto relative">
+            <div className="px-5 flex flex-col-reverse lg:flex-row items-center pt-44 lg:pt-0 sm:h-screen">
+                <article className="w-full sm:w-5/6 lg:w-1/2 px-4 sm:px-10 mt-24 lg:mt-0 mb-20 lg:mb-4">
                     <p className="flex items-center">
                         <svg
                             width="20"
@@ -108,8 +108,8 @@ export default function Presentation() {
                         monter en compétence technique.
                     </p>
                 </article>
-                <div className="w-1/2 relative flex justify-center">
-                    <div className="w-[70%] h-full rounded-lg shadow-lg relative ml-10">
+                <div className="w-[70%] min-w-[200px] sm:w-[45%] lg:w-1/2 -ml-6 sm:-ml-0 relative flex justify-center">
+                    <div className="lg:w-[70%] h-full rounded-lg shadow-lg relative ml-10">
                         <div className="card rounded-lg bg-slate-100">
                             <img
                                 src="/img/me.png"
