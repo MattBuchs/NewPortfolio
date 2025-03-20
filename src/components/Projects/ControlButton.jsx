@@ -1,10 +1,12 @@
-const ControlButton = ({ isPausedClicked, setIsPausedClicked }) => {
+const ControlButton = ({ isPaused, isPausedClicked, setIsPausedClicked }) => {
     return (
         <button
             onClick={() => setIsPausedClicked(!isPausedClicked)}
-            className="absolute bottom-4 right-4 w-10 h-10 bg-white rounded-full flex justify-center items-center shadow z-50"
+            aria-label="Pause/Play"
+            title="Pause/Play"
+            className="hidden md:flex absolute bottom-4 right-4 w-10 h-10 bg-white rounded-full justify-center items-center shadow z-50"
         >
-            {isPausedClicked ? (
+            {isPausedClicked || isPaused ? (
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 384 512"

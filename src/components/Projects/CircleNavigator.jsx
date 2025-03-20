@@ -12,11 +12,7 @@ const CircleNavigator = ({
     const smallCircleRadius = 11;
 
     return (
-        <section
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-            className="hidden md:block absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px]"
-        >
+        <section className="hidden md:block absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px]">
             <svg width="450" height="450" xmlns="http://www.w3.org/2000/svg">
                 <circle
                     cx={positionX}
@@ -49,6 +45,8 @@ const CircleNavigator = ({
                             transform={`translate(${x}, ${y})`}
                             className="cursor-pointer"
                             onClick={() => handleCircleClick(index)}
+                            onMouseEnter={() => setIsPaused(true)}
+                            onMouseLeave={() => setIsPaused(false)}
                         >
                             <circle
                                 cx="0"

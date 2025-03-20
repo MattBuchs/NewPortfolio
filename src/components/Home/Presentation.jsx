@@ -48,7 +48,7 @@ export default function Presentation() {
 
     return (
         <section className="max-w-[1250px] md:w-[90%] h-full w-full mx-auto relative">
-            <div className="px-5 flex flex-col-reverse lg:flex-row items-center pt-44 lg:pt-0 sm:h-screen">
+            <div className="px-5 flex flex-col-reverse lg:flex-row items-center pt-44 lg:pt-0 sm:min-h-screen">
                 <article className="w-full sm:w-5/6 lg:w-1/2 px-4 sm:px-10 mt-24 lg:mt-0 mb-20 lg:mb-4">
                     <p className="flex items-center">
                         <svg
@@ -114,7 +114,7 @@ export default function Presentation() {
                             <img
                                 src="/img/me.png"
                                 alt=""
-                                className="w-full select-none"
+                                className="w-full h-1/2 select-none"
                             />
                             <img
                                 src="/img/light-accent-compressed.png"
