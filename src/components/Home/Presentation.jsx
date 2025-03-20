@@ -100,12 +100,14 @@ export default function Presentation() {
                         </span>
                     </h2>
                     <p className="mt-4">
-                        Développeur Web & Mobile, passionné par les nouvelles
-                        technologies. Fraîchement diplômé du TP de développeur
-                        Web, je souhaite renforcer ces nouvelles compétences.
-                        D’un naturel curieux, logique et pragmatique j’aimerais
-                        intégrer un poste de développeur Web full stack afin de
-                        monter en compétence technique.
+                        Développeur Web & Mobile passionné par les nouvelles
+                        technologies, je suis désormais freelance, offrant mes
+                        services aux entreprises et particuliers. Diplômé du
+                        Titre Professionnel de Développeur Web, j&apos;ai depuis
+                        mené divers projets qui ont enrichi mes compétences
+                        techniques. Curieux, logique et pragmatique, je
+                        m&apos;efforce de proposer des solutions innovantes et
+                        adaptées aux besoins spécifiques de chaque client.
                     </p>
                 </article>
                 <div className="w-[70%] min-w-[200px] sm:w-[45%] lg:w-1/2 -ml-6 sm:-ml-0 relative flex justify-center">
