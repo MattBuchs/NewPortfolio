@@ -9,6 +9,7 @@ export default function BarLink({ isBarVisible }) {
             <ul className="flex">
                 <li
                     title="Linkedin"
+                    aria-label="Profil Linkedin"
                     className="bg-slate-400/70 hover:rounded-se hover:shadow h-20 w-[54px] translate-y-7 hover:translate-y-0 duration-200"
                 >
                     <a
@@ -31,6 +32,7 @@ export default function BarLink({ isBarVisible }) {
                 </li>
                 <li
                     title="Github"
+                    aria-label="Profil Github"
                     className="bg-slate-400/70 hover:rounded-t hover:shadow h-20 w-[54px] translate-y-7 hover:translate-y-0 duration-200"
                 >
                     <a
@@ -53,6 +55,7 @@ export default function BarLink({ isBarVisible }) {
                 </li>
                 <li
                     title="Email"
+                    aria-label="Envoyer un email"
                     className="bg-slate-400/70 hover:rounded-t hover:shadow h-20 w-[54px] translate-y-7 hover:translate-y-0 duration-200"
                 >
                     <a
@@ -79,11 +82,12 @@ export default function BarLink({ isBarVisible }) {
                     </a>
                 </li>
                 <li
-                    title="CV"
+                    title="Flyer"
+                    aria-label="Télécharger le flyer"
                     className="bg-slate-400/70 rounded-se hover:rounded-t hover:shadow h-20 w-[54px] translate-y-7 hover:translate-y-0 duration-200"
                 >
                     <a
-                        href="/files/CV-MattBuchs.pdf"
+                        href="/files/Flyer.pdf"
                         className="w-full h-full flex justify-center pt-3"
                         target="_blank"
                         download={true}
