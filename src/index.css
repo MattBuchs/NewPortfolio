@@ -94,3 +94,14 @@ body::-webkit-scrollbar-thumb {
         rgba(167, 126, 232, 0) 100%
     );
 }
+
+.gradient-card-mobile {
+    background: linear-gradient(
+        to bottom,
+        rgba(226, 228, 246, 0.919) 0%,
+        rgba(226, 228, 246, 0.427) 20%,
+        rgba(226, 228, 246, 0.186) 40%,
+        rgba(226, 228, 246, 0.053) 70%,
+        rgba(167, 126, 232, 0) 100%
+    );
+}

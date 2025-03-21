@@ -66,19 +66,19 @@ export default function Technos() {
                     </div>
                 </header>
 
-                <div className="flex flex-wrap justify-center">
+                <div className="flex gap-3 sm:gap-5 mx-4 flex-wrap justify-center">
                     {technos.map((techno, index) => (
                         <div
                             key={techno.id}
                             onMouseMove={(e) => rotateToMouse(e, index)}
                             onMouseLeave={() => resetCard(index)}
                             ref={(el) => (cardRefs.current[index] = el)}
-                            className="techno-card w-[250px] bg-slate-100 m-4 flex flex-col justify-center items-center py-8 border rounded shadow"
+                            className="techno-card w-[160px] sm:w-[250px] bg-slate-100 flex flex-col justify-center items-center py-5 sm:py-8 border rounded shadow"
                         >
                             <img
                                 src={`/img/technos/${techno.img}`}
                                 alt={techno.title}
-                                className="h-20"
+                                className="h-14 sm:h-20"
                             />
                             <p className="mt-4 text-lg">{techno.title}</p>
                             <div className="glow"></div>

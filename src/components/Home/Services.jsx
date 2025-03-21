@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { ClipboardList } from "lucide-react";
+import { useScreenSize } from "../../hook/useScreenSize";
 
 export default function Services() {
+    const screenSize = useScreenSize();
+
     return (
         <section className="max-w-4xl md:w-[90%] w-full h-full mx-auto relative">
             <div className="pt-20 pb-8">
@@ -23,22 +26,28 @@ export default function Services() {
                     </div>
                 </header>
 
-                <main className="flex flex-col gap-8">
-                    <section className="flex items-center gradient-card p-8 rounded-full">
-                        <div className="min-w-[200px] h-[200px] flex justify-center items-center">
+                <main className="flex flex-col gap-8 px-4 md:px-0">
+                    <section
+                        className={`flex flex-col md:flex-row items-center p-5 sm:p-8 rounded-2xl md:rounded-full ${
+                            screenSize.width < 768
+                                ? "gradient-card-mobile"
+                                : "gradient-card"
+                        }`}
+                    >
+                        <div className="w-[150px] h-[150px] md:min-w-[200px] md:h-[200px] flex justify-center items-center mb-4 md:mb-0">
                             <img
                                 src="/img/illustration/illustration-conception-de-sites-web-personnalisés.jpg"
-                                alt=""
+                                alt="Conception de sites web"
                                 className="rounded-full w-full h-full object-cover"
                             />
                         </div>
 
-                        <div className="ml-24">
-                            <h3 className="text-xl font-semibold mb-3">
+                        <div className="md:ml-8 lg:ml-24">
+                            <h3 className="text-lg text-center md:text-left md:text-xl font-semibold mb-2 md:mb-3">
                                 Conception et Développement de Sites Web
                                 Personnalisés
                             </h3>
-                            <p>
+                            <p className="text-sm md:text-base mt-2 md:mt-0">
                                 Je propose la création de sites web sur mesure,
                                 adaptés à l&apos;identité et aux besoins
                                 spécifiques de chaque client. Chaque projet est
@@ -49,28 +58,34 @@ export default function Services() {
                             </p>
                             <Link
                                 to="/contact"
-                                className="text-sm italic text-blue-500 font-semibold hover:underline"
+                                className="inline-block mt-2 text-sm italic text-blue-500 font-semibold hover:underline"
                             >
                                 Demander un devis
                             </Link>
                         </div>
                     </section>
 
-                    <section className="flex flex-row-reverse items-center gradient-card-inverse p-8 rounded-full">
-                        <div className="min-w-[200px] h-[200px] flex justify-center items-center">
+                    <section
+                        className={`flex flex-col md:flex-row-reverse items-center p-5 sm:p-8 rounded-2xl md:rounded-full ${
+                            screenSize.width < 768
+                                ? "gradient-card-mobile"
+                                : "gradient-card-inverse"
+                        }`}
+                    >
+                        <div className="w-[150px] h-[150px] md:min-w-[200px] md:h-[200px] flex justify-center items-center mb-4 md:mb-0">
                             <img
                                 src="/img/illustration/illustration-seo.webp"
-                                alt=""
+                                alt="SEO"
                                 className="rounded-full w-full h-full object-cover"
                             />
                         </div>
 
-                        <div className="mr-24">
-                            <h3 className="text-xl font-semibold mb-3">
+                        <div className="md:mr-8 lg:mr-24">
+                            <h3 className="text-lg text-center md:text-left md:text-xl font-semibold mb-2 md:mb-3">
                                 Optimisation des Performances et du
                                 Référencement (SEO)
                             </h3>
-                            <p>
+                            <p className="text-sm md:text-base mt-2 md:mt-0">
                                 Un site performant et bien référencé est
                                 essentiel pour attirer et retenir les visiteurs.
                                 J&apos;analyse et optimise la vitesse de
@@ -83,20 +98,26 @@ export default function Services() {
                         </div>
                     </section>
 
-                    <section className="flex items-center gradient-card p-8 rounded-full">
-                        <div className="min-w-[200px] h-[200px] flex justify-center items-center">
+                    <section
+                        className={`flex flex-col md:flex-row items-center p-5 sm:p-8 rounded-2xl md:rounded-full ${
+                            screenSize.width < 768
+                                ? "gradient-card-mobile"
+                                : "gradient-card"
+                        }`}
+                    >
+                        <div className="w-[150px] h-[150px] md:min-w-[200px] md:h-[200px] flex justify-center items-center mb-4 md:mb-0">
                             <img
                                 src="/img/illustration/illustration-maintenance.jpg"
-                                alt=""
+                                alt="Maintenance"
                                 className="rounded-full w-full h-full object-cover"
                             />
                         </div>
 
-                        <div className="ml-24">
-                            <h3 className="text-xl font-semibold mb-3">
+                        <div className="md:ml-8 lg:ml-24">
+                            <h3 className="text-lg text-center md:text-left md:text-xl font-semibold mb-2 md:mb-3">
                                 Maintenance Continue et Support Technique
                             </h3>
-                            <p>
+                            <p className="text-sm md:text-base mt-2 md:mt-0">
                                 Pour assurer la pérennité et la sécurité de
                                 votre site, j&apos;offre des services de
                                 maintenance régulière. Cela inclut les mises à
