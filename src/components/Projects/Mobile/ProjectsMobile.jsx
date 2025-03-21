@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { MoveRight } from "lucide-react";
 
 export default function ProjectsMobile({ projects = false }) {
     return (
@@ -41,10 +42,15 @@ export default function ProjectsMobile({ projects = false }) {
 
                             <div className="flex justify-between items-center">
                                 <Link
-                                    to={`/project/${project.id}`}
-                                    className="text-blue-500 font-semibold hover:underline"
+                                    to={`/project/${project.slug}`}
+                                    className="text-blue-500 font-semibold hover:underline flex items-center gap-1.5"
                                 >
                                     Voir le projet
+                                    <MoveRight
+                                        width={20}
+                                        height={20}
+                                        className="mt-1"
+                                    />
                                 </Link>
 
                                 <div className="flex gap-2">

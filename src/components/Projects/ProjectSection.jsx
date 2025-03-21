@@ -1,4 +1,5 @@
 import { MoveRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ProjectSection = ({ project, index, setIsPaused, sectionRefs }) => {
     return (
@@ -21,10 +22,11 @@ const ProjectSection = ({ project, index, setIsPaused, sectionRefs }) => {
                             <p className="text-lg leading-6 mt-1.5">
                                 {project.paragraph}
                             </p>
-                            <button
+                            <Link
+                                to={`/project/${project.slug}`}
                                 onMouseEnter={() => setIsPaused(true)}
                                 onMouseLeave={() => setIsPaused(false)}
-                                className="border mt-6 px-6 py-2 rounded-full hover:bg-white hover:text-black hover:scale-[1.08] transition-all duration-300 font-semibold flex items-center gap-2"
+                                className="border mt-6 px-6 py-2 rounded-full hover:bg-white hover:text-black hover:scale-[1.08] transition-all duration-300 font-semibold inline-flex items-center gap-2"
                             >
                                 Voir le Projet
                                 <MoveRight
@@ -32,7 +34,7 @@ const ProjectSection = ({ project, index, setIsPaused, sectionRefs }) => {
                                     height={24}
                                     className="mt-0.5"
                                 />
-                            </button>
+                            </Link>
                         </article>
                     </div>
                 ) : (
@@ -58,10 +60,11 @@ const ProjectSection = ({ project, index, setIsPaused, sectionRefs }) => {
                             <p className="text-lg leading-6 mt-1.5">
                                 {project.paragraph}
                             </p>
-                            <button
+                            <Link
+                                to={`/project/${project.slug}`}
                                 onMouseEnter={() => setIsPaused(true)}
                                 onMouseLeave={() => setIsPaused(false)}
-                                className="border mt-6 px-6 py-2 rounded-full hover:bg-white hover:text-black hover:scale-[1.08] transition-all duration-300 font-semibold flex items-center gap-2"
+                                className="border mt-6 px-6 py-2 rounded-full hover:bg-white hover:text-black hover:scale-[1.08] transition-all duration-300 font-semibold inline-flex items-center gap-2"
                             >
                                 Voir le Projet
                                 <MoveRight
@@ -69,7 +72,7 @@ const ProjectSection = ({ project, index, setIsPaused, sectionRefs }) => {
                                     height={24}
                                     className="mt-0.5"
                                 />
-                            </button>
+                            </Link>
                         </article>
                     </div>
                 ) : (
