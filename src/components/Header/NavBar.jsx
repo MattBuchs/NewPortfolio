@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useScreenSize } from "../../hook/useScreenSize";
 
-export default function NavBar() {
+export default function NavBar({ isProjectPage }) {
     const screenWidth = useScreenSize().width;
     const navRef = useRef(null);
     const [toggle, setToggle] = useState(false);
@@ -31,7 +31,11 @@ export default function NavBar() {
     }, [toggle]);
 
     return (
-        <header className="w-full mx-auto mt-4 sm:mt-8 absolute z-40 flex justify-center">
+        <header
+            className={`w-full mx-auto mt-4 absolute z-40 flex justify-center${
+                isProjectPage ? "" : " sm:mt-8"
+            }`}
+        >
             <div className="max-w-[1250px] md:w-[90%] flex justify-between items-center w-full px-5">
                 <h1 className="text-3xl font-semibold underline underline-offset-8 flex items-center">
                     <img
