@@ -72,3 +72,25 @@ body::-webkit-scrollbar-thumb {
     background-blend-mode: overlay, overlay, overlay, normal;
     transform: scale(-1);
 }
+
+.gradient-card {
+    background: linear-gradient(
+        to right,
+        rgba(226, 228, 246, 0.919) 0%,
+        rgba(226, 228, 246, 0.427) 20%,
+        rgba(226, 228, 246, 0.186) 40%,
+        rgba(226, 228, 246, 0.053) 70%,
+        rgba(167, 126, 232, 0) 100%
+    );
+}
+
+.gradient-card-inverse {
+    background: linear-gradient(
+        to left,
+        rgba(226, 228, 246, 0.919) 0%,
+        rgba(226, 228, 246, 0.427) 20%,
+        rgba(226, 228, 246, 0.186) 40%,
+        rgba(226, 228, 246, 0.053) 70%,
+        rgba(167, 126, 232, 0) 100%
+    );
+}

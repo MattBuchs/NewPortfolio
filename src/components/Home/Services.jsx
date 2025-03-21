@@ -1,41 +1,17 @@
+import { Link } from "react-router-dom";
+import { ClipboardList } from "lucide-react";
+
 export default function Services() {
     return (
-        <section className="max-w-[1250px] md:w-[90%] w-full h-full mx-auto relative">
-            <div className="py-20">
-                <header>
+        <section className="max-w-4xl md:w-[90%] w-full h-full mx-auto relative">
+            <div className="pt-20 pb-8">
+                <header className="mb-12">
                     <h2 className="text-3xl text-center font-semibold">
                         Services
                     </h2>
                     <div className="flex justify-center mt-6 relative">
-                        <span className="w-10 h-10 border border-gray-300 rounded-full p-1.5 bg-gray-100">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 500 500"
-                            >
-                                <defs>
-                                    <clipPath id="a">
-                                        <path d="M0 0h500v500H0z" />
-                                    </clipPath>
-                                    <clipPath id="c">
-                                        <path d="M0 0h500v500H0z" />
-                                    </clipPath>
-                                    <clipPath id="b">
-                                        <path d="M0 0h500v500H0z" />
-                                    </clipPath>
-                                </defs>
-                                <g clipPath="url(#a)">
-                                    <g className="primary design">
-                                        <path className="primary" />
-                                        <path className="primary" />
-                                    </g>
-                                    <g className="primary design">
-                                        <path
-                                            d="M289.37 174.185c0-4.166-1.666-8.123-4.582-11.04L209.592 87.95c-6.25-6.04-16.04-6.04-22.08 0-6.04 6.041-6.249 16.04 0 22.08l48.534 48.534H78.155c-8.54 0-15.623 7.082-15.623 15.622s7.082 15.623 15.623 15.623h157.891l-48.534 48.534c-6.249 6.04-6.249 16.039 0 22.08 3.125 3.124 7.082 4.582 11.04 4.582s7.915-1.458 11.04-4.582l75.196-75.197a15.6 15.6 0 0 0 4.583-11.04m132.479 136.02H263.957l48.534-48.534c6.04-6.04 6.04-16.04 0-22.08s-16.04-6.04-22.08 0l-75.196 75.196c-6.04 6.041-6.04 16.04 0 22.08l75.196 75.196c3.125 3.125 7.082 4.583 11.04 4.583s7.915-1.458 11.04-4.583c6.04-6.04 6.04-16.039 0-22.08l-48.534-48.533h157.891c8.54 0 15.623-7.083 15.623-15.623s-7.082-15.622-15.623-15.622"
-                                            className="primary"
-                                        />
-                                    </g>
-                                </g>
-                            </svg>
+                        <span className="w-10 h-10 border border-gray-300 rounded-full p-2.5 bg-gray-100">
+                            <ClipboardList className="w-full h-full" />
                         </span>
                         <hr
                             className="h-0.5 w-2/5 absolute mt-[18px] -z-10"
@@ -46,6 +22,93 @@ export default function Services() {
                         />
                     </div>
                 </header>
+
+                <main className="flex flex-col gap-8">
+                    <section className="flex items-center gradient-card p-8 rounded-full">
+                        <div className="min-w-[200px] h-[200px] flex justify-center items-center">
+                            <img
+                                src="/img/illustration/illustration-conception-de-sites-web-personnalisés.jpg"
+                                alt=""
+                                className="rounded-full w-full h-full object-cover"
+                            />
+                        </div>
+
+                        <div className="ml-24">
+                            <h3 className="text-xl font-semibold mb-3">
+                                Conception et Développement de Sites Web
+                                Personnalisés
+                            </h3>
+                            <p>
+                                Je propose la création de sites web sur mesure,
+                                adaptés à l&apos;identité et aux besoins
+                                spécifiques de chaque client. Chaque projet est
+                                conçu pour offrir une expérience utilisateur
+                                intuitive, une navigation fluide et un design
+                                moderne, garantissant une présence en ligne
+                                professionnelle et efficace.
+                            </p>
+                            <Link
+                                to="/contact"
+                                className="text-sm italic text-blue-500 font-semibold hover:underline"
+                            >
+                                Demander un devis
+                            </Link>
+                        </div>
+                    </section>
+
+                    <section className="flex flex-row-reverse items-center gradient-card-inverse p-8 rounded-full">
+                        <div className="min-w-[200px] h-[200px] flex justify-center items-center">
+                            <img
+                                src="/img/illustration/illustration-seo.webp"
+                                alt=""
+                                className="rounded-full w-full h-full object-cover"
+                            />
+                        </div>
+
+                        <div className="mr-24">
+                            <h3 className="text-xl font-semibold mb-3">
+                                Optimisation des Performances et du
+                                Référencement (SEO)
+                            </h3>
+                            <p>
+                                Un site performant et bien référencé est
+                                essentiel pour attirer et retenir les visiteurs.
+                                J&apos;analyse et optimise la vitesse de
+                                chargement, la structure du site et le contenu
+                                pour améliorer la visibilité sur les moteurs de
+                                recherche, assurant ainsi une meilleure position
+                                dans les résultats et une augmentation du trafic
+                                organique.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section className="flex items-center gradient-card p-8 rounded-full">
+                        <div className="min-w-[200px] h-[200px] flex justify-center items-center">
+                            <img
+                                src="/img/illustration/illustration-maintenance.jpg"
+                                alt=""
+                                className="rounded-full w-full h-full object-cover"
+                            />
+                        </div>
+
+                        <div className="ml-24">
+                            <h3 className="text-xl font-semibold mb-3">
+                                Maintenance Continue et Support Technique
+                            </h3>
+                            <p>
+                                Pour assurer la pérennité et la sécurité de
+                                votre site, j&apos;offre des services de
+                                maintenance régulière. Cela inclut les mises à
+                                jour nécessaires, la surveillance de la
+                                sécurité, la correction de bugs éventuels et un
+                                support technique réactif, garantissant que
+                                votre site reste opérationnel et sécurisé en
+                                tout temps.
+                            </p>
+                        </div>
+                    </section>
+                </main>
             </div>
         </section>
     );
