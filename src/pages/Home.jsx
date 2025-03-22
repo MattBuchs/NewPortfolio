@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <>
             <NavBar />
-            <main>
+            <main className="overflow-x-hidden">
                 <Presentation />
                 <About />
                 <Services />
