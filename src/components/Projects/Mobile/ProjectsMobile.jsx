@@ -4,7 +4,7 @@ import { MoveRight } from "lucide-react";
 
 export default function ProjectsMobile({ projects = false }) {
     return (
-        <div className="px-4 py-6 bg-stone-100 pt-20">
+        <div className="px-4 py-6 bg-stone-100 pt-28">
             <h1 className="text-2xl font-bold text-center mb-6">Mes Projets</h1>
 
             <div className="flex flex-col gap-6">
