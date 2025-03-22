@@ -22,6 +22,11 @@ export default function Services() {
             scale: 1,
             transition: { delay: 0.3, type: "spring", stiffness: 200 },
         },
+        hover: {
+            rotate: 10,
+            scale: 1.1,
+            transition: { duration: 0.3 },
+        },
     };
 
     const sectionVariants = {
@@ -152,7 +157,6 @@ export default function Services() {
                         }`}
                         initial="hidden"
                         whileInView="visible"
-                        whileHover="hover"
                         viewport={{ once: true, amount: 0.3 }}
                         variants={sectionRightVariants}
                     >
@@ -203,7 +207,6 @@ export default function Services() {
                         }`}
                         initial="hidden"
                         whileInView="visible"
-                        whileHover="hover"
                         viewport={{ once: true, amount: 0.3 }}
                         variants={sectionVariants}
                     >

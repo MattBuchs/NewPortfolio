@@ -1,5 +1,6 @@
 import { Layers } from "lucide-react";
 import { useRef } from "react";
+import { motion } from "framer-motion";
 
 export default function Technos() {
     const cardRefs = useRef([]);
@@ -45,17 +46,49 @@ export default function Technos() {
         card.querySelector(".glow").style.backgroundImage = "none";
     };
 
+    const headerVariants = {
+        hidden: { opacity: 0, y: -50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6 },
+        },
+    };
+
+    const iconVariants = {
+        hidden: { scale: 0 },
+        visible: {
+            scale: 1,
+            transition: { delay: 0.3, type: "spring", stiffness: 200 },
+        },
+        hover: {
+            rotate: 10,
+            scale: 1.1,
+            transition: { duration: 0.3 },
+        },
+    };
+
     return (
         <section className="max-w-[1250px] md:w-[90%] w-full h-full mx-auto relative">
             <div className="py-20">
-                <header className="mb-10">
+                <motion.header
+                    className="mb-12"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.5 }}
+                    variants={headerVariants}
+                >
                     <h2 className="text-3xl text-center font-semibold">
                         Technos
                     </h2>
                     <div className="flex justify-center mt-6 relative">
-                        <span className="w-10 h-10 border border-gray-300 rounded-full p-2.5 bg-gray-100">
+                        <motion.span
+                            className="w-10 h-10 border border-gray-300 rounded-full p-2.5 bg-gray-100"
+                            variants={iconVariants}
+                            whileHover="hover"
+                        >
                             <Layers className="w-full h-full" />
-                        </span>
+                        </motion.span>
                         <hr
                             className="h-0.5 w-2/5 absolute mt-[18px] -z-10"
                             style={{
@@ -64,7 +97,7 @@ export default function Technos() {
                             }}
                         />
                     </div>
-                </header>
+                </motion.header>
 
                 <div className="flex gap-3 sm:gap-5 mx-4 flex-wrap justify-center">
                     {technos.map((techno, index) => (
@@ -73,14 +106,14 @@ export default function Technos() {
                             onMouseMove={(e) => rotateToMouse(e, index)}
                             onMouseLeave={() => resetCard(index)}
                             ref={(el) => (cardRefs.current[index] = el)}
-                            className="techno-card w-[160px] sm:w-[250px] bg-slate-100 flex flex-col justify-center items-center py-5 sm:py-8 border rounded shadow"
+                            className="techno-card w-[140px] sm:w-[250px] bg-slate-100 flex flex-col justify-center items-center py-5 sm:py-8 border rounded shadow"
                         >
                             <img
                                 src={`/img/technos/${techno.img}`}
                                 alt={techno.title}
                                 className="h-14 sm:h-20"
                             />
-                            <p className="mt-4 text-lg">{techno.title}</p>
+                            <p className="mt-4 sm:text-lg">{techno.title}</p>
                             <div className="glow"></div>
                         </div>
                     ))}
