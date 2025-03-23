@@ -105,7 +105,7 @@ export default function Services() {
                         >
                             <img
                                 src="/img/illustration/illustration-conception-de-sites-web-personnalisés.jpg"
-                                alt="Conception de sites web"
+                                alt=""
                                 className="rounded-full w-full h-full object-cover"
                             />
                         </motion.div>
@@ -166,7 +166,7 @@ export default function Services() {
                         >
                             <img
                                 src="/img/illustration/illustration-seo.webp"
-                                alt="SEO"
+                                alt=""
                                 className="rounded-full w-full h-full object-cover"
                             />
                         </motion.div>
@@ -216,7 +216,7 @@ export default function Services() {
                         >
                             <img
                                 src="/img/illustration/illustration-maintenance.jpg"
-                                alt="Maintenance"
+                                alt=""
                                 className="rounded-full w-full h-full object-cover"
                             />
                         </motion.div>

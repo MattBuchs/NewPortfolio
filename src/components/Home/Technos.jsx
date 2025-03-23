@@ -110,7 +110,7 @@ export default function Technos() {
                         >
                             <img
                                 src={`/img/technos/${techno.img}`}
-                                alt={techno.title}
+                                alt=""
                                 className="h-14 sm:h-20"
                             />
                             <p className="mt-4 sm:text-lg">{techno.title}</p>

@@ -102,6 +102,8 @@ export default function NavBar({ isProjectPage }) {
                             className="sm:hidden w-14 h-14 flex items-center justify-center hover:bg-stone-200 rounded-full p-1.5"
                             onClick={() => setToggle(!toggle)}
                             whileTap={{ scale: 0.95 }}
+                            aria-label="Ouvrir le menu"
+                            title="Ouvrir le menu"
                         >
                             <svg
                                 width="67"

@@ -58,9 +58,9 @@ export default function Project() {
                             transition={{ delay: 0.2, duration: 0.5 }}
                         >
                             <div className="sticky top-24">
-                                <h1 className="text-4xl font-bold mb-4">
+                                <h2 className="text-4xl font-bold mb-4">
                                     {project.title}
-                                </h1>
+                                </h2>
                                 <div
                                     className="w-16 h-1 mb-6"
                                     style={{ backgroundColor: project.bgColor }}

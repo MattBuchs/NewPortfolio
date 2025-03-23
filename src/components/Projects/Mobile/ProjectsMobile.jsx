@@ -27,7 +27,7 @@ export default function ProjectsMobile({ projects = false }) {
                         >
                             <img
                                 src={`/img/${project.img}`}
-                                alt={project.title}
+                                alt=""
                                 className="w-full h-full object-contain p-2 rounded"
                             />
                         </div>
@@ -43,7 +43,7 @@ export default function ProjectsMobile({ projects = false }) {
                             <div className="flex justify-between items-center">
                                 <Link
                                     to={`/project/${project.slug}`}
-                                    className="text-blue-500 font-semibold hover:underline flex items-center gap-1.5"
+                                    className="text-blue-600 font-semibold hover:underline flex items-center gap-1.5"
                                 >
                                     Voir le projet
                                     <MoveRight

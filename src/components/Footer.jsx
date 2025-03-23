@@ -26,7 +26,7 @@ export default function Footer() {
                 <div className="flex flex-col items-center text-sm">
                     <img
                         src="/img/Logo-Skroma.jpg"
-                        alt="Logo"
+                        alt="Logo Matt Buchs"
                         className="w-16 h-16 rounded-full mb-6"
                     />
                     <p className="text-base">By Matt.</p>
@@ -41,6 +41,8 @@ export default function Footer() {
                         href="https://github.com/MattBuchs"
                         className="w-full h-full flex justify-center pt-3 mr-1 border-r md:border-r-0 pb-3 md:pb-0 border-slate-50/30"
                         target="_blank"
+                        aria-label="GitHub"
+                        title="GitHub"
                     >
                         <svg
                             stroke="currentColor"
@@ -59,6 +61,8 @@ export default function Footer() {
                         href="https://www.linkedin.com/in/matt-buchs/"
                         className="w-full h-full flex justify-center pt-3"
                         target="_blank"
+                        aria-label="LinkedIn"
+                        title="LinkedIn"
                     >
                         <svg
                             stroke="currentColor"

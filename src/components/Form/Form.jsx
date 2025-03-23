@@ -227,7 +227,7 @@ export default function Form() {
                     ></textarea>
                 </div>
 
-                <small className="text-red-600/85 italic text-xs block mt-0.5">
+                <small className="text-red-600 italic text-xs block mt-0.5">
                     * Champ obligatoire
                 </small>
                 {errorMessage && (
