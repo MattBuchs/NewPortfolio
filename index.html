@@ -66,8 +66,29 @@
         />
 
         <title>Matt Buchs - Développeur Web Full Stack | Portfolio</title>
-      <script type="module" crossorigin src="/assets/index-CisF7CaE.js"></script>
-      <link rel="stylesheet" crossorigin href="/assets/index-B8-4gTtw.css">
+
+        <!-- GitHub Pages SPA Redirect Script -->
+        <script>
+            // Récupère la route sauvegardée par 404.html et restaure l'URL
+            (function (l) {
+                if (l.search[1] === "/") {
+                    var decoded = l.search
+                        .slice(1)
+                        .split("&")
+                        .map(function (s) {
+                            return s.replace(/~and~/g, "&");
+                        })
+                        .join("?");
+                    window.history.replaceState(
+                        null,
+                        null,
+                        l.pathname.slice(0, -1) + decoded + l.hash
+                    );
+                }
+            })(window.location);
+        </script>
+      <script type="module" crossorigin src="/assets/index-CCCQZbwW.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/index-BdTdnewW.css">
     </head>
     <body>
         <div id="root"></div>

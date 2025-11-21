@@ -1,12 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
-        <meta http-equiv="refresh" content="0; url=./" />
-    </head>
-    <body>
+        <meta charset="utf-8" />
+        <title>Redirection...</title>
         <script>
-            // Redirige vers index.html pour permettre à React Router de gérer les routes
-            window.location.replace("/");
+            // Sauvegarde la route actuelle avant la redirection
+            // Cette solution permet à React Router de gérer correctement les routes
+            // même après un refresh de la page sur GitHub Pages
+
+            var pathSegmentsToKeep = 0;
+            var l = window.location;
+
+            l.replace(
+                l.protocol +
+                    "//" +
+                    l.hostname +
+                    (l.port ? ":" + l.port : "") +
+                    l.pathname
+                        .split("/")
+                        .slice(0, 1 + pathSegmentsToKeep)
+                        .join("/") +
+                    "/?/" +
+                    l.pathname
+                        .slice(1)
+                        .split("/")
+                        .slice(pathSegmentsToKeep)
+                        .join("/")
+                        .replace(/&/g, "~and~") +
+                    (l.search
+                        ? "&" + l.search.slice(1).replace(/&/g, "~and~")
+                        : "") +
+                    l.hash
+            );
         </script>
-    </body>
+    </head>
+    <body></body>
 </html>
