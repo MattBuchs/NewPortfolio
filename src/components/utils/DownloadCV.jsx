@@ -5,7 +5,7 @@ export default function DownloadCV() {
     const handleDownload = () => {
         // Créer un lien temporaire pour télécharger le CV
         const link = document.createElement("a");
-        link.href = "/files/CV_Matt_Buchs.pdf";
+        link.href = "/files/CV-MattBuchs.pdf";
         link.download = "CV_Matt_Buchs.pdf";
         document.body.appendChild(link);
         link.click();

@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="bg-white rounded-2xl shadow-lg p-8 md:p-12 space-y-8"
+                        className="bg-stone-100 rounded-2xl shadow-lg p-8 md:p-12 space-y-8"
                     >
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
@@ -265,19 +265,7 @@ export default function PrivacyPolicy() {
 
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                10. Transferts de données
-                            </h2>
-                            <p className="text-gray-700 leading-relaxed">
-                                Vos données personnelles sont hébergées au sein
-                                de l&apos;Union Européenne. En cas de transfert
-                                hors UE, nous nous assurons que des garanties
-                                appropriées sont en place conformément au RGPD.
-                            </p>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                11. Réclamation
+                                10. Réclamation
                             </h2>
                             <p className="text-gray-700 leading-relaxed">
                                 Si vous estimez que vos droits ne sont pas
@@ -299,7 +287,7 @@ export default function PrivacyPolicy() {
 
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                12. Modifications
+                                11. Modifications
                             </h2>
                             <p className="text-gray-700 leading-relaxed">
                                 Nous nous réservons le droit de modifier cette
@@ -311,7 +299,7 @@ export default function PrivacyPolicy() {
 
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                13. Contact
+                                12. Contact
                             </h2>
                             <p className="text-gray-700 leading-relaxed">
                                 Pour toute question concernant cette Politique

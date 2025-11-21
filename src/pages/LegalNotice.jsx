@@ -36,7 +36,7 @@ export default function LegalNotice() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="bg-white rounded-2xl shadow-lg p-8 md:p-12 space-y-8"
+                        className="bg-stone-100 rounded-2xl shadow-lg p-8 md:p-12 space-y-8"
                     >
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
@@ -48,7 +48,6 @@ export default function LegalNotice() {
                                 </p>
                                 <p>
                                     <strong>Statut :</strong> Auto-entrepreneur
-                                    / Micro-entreprise
                                 </p>
                                 <p>
                                     <strong>Adresse :</strong> 25300 Arçon,
@@ -72,21 +71,15 @@ export default function LegalNotice() {
                                         06 64 93 52 94
                                     </a>
                                 </p>
+                                <p>
+                                    <strong>SIRET :</strong> 93948022400012
+                                </p>
                             </div>
                         </section>
 
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                2. Directeur de la publication
-                            </h2>
-                            <p className="text-gray-700">
-                                Le directeur de la publication est Matt Buchs.
-                            </p>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                3. Hébergement
+                                2. Hébergement
                             </h2>
                             <div className="text-gray-700 space-y-2">
                                 <p>Ce site est hébergé par :</p>
@@ -113,7 +106,7 @@ export default function LegalNotice() {
 
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                4. Propriété intellectuelle
+                                3. Propriété intellectuelle
                             </h2>
                             <p className="text-gray-700 leading-relaxed">
                                 L&apos;ensemble du contenu de ce site (textes,
@@ -129,7 +122,7 @@ export default function LegalNotice() {
 
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                5. Données personnelles
+                                4. Données personnelles
                             </h2>
                             <p className="text-gray-700 leading-relaxed">
                                 Conformément à la loi « Informatique et Libertés
@@ -160,7 +153,7 @@ export default function LegalNotice() {
 
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                6. Cookies
+                                5. Cookies
                             </h2>
                             <p className="text-gray-700 leading-relaxed">
                                 Ce site n&apos;utilise pas de cookies
@@ -172,7 +165,7 @@ export default function LegalNotice() {
 
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                7. Crédits
+                                6. Crédits
                             </h2>
                             <p className="text-gray-700 leading-relaxed">
                                 Site conçu et développé par Matt Buchs.
@@ -184,25 +177,7 @@ export default function LegalNotice() {
 
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                8. Limitation de responsabilité
-                            </h2>
-                            <p className="text-gray-700 leading-relaxed">
-                                Matt Buchs s&apos;efforce d&apos;assurer
-                                l&apos;exactitude et la mise à jour des
-                                informations diffusées sur ce site. Toutefois,
-                                il ne peut garantir l&apos;exactitude, la
-                                précision ou l&apos;exhaustivité des
-                                informations mises à disposition sur ce site. En
-                                conséquence, Matt Buchs décline toute
-                                responsabilité pour toute imprécision,
-                                inexactitude ou omission portant sur des
-                                informations disponibles sur ce site.
-                            </p>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                9. Droit applicable
+                                7. Droit applicable
                             </h2>
                             <p className="text-gray-700 leading-relaxed">
                                 Les présentes mentions légales sont régies par

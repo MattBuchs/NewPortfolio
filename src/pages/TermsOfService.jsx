@@ -36,7 +36,7 @@ export default function TermsOfService() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="bg-white rounded-2xl shadow-lg p-8 md:p-12 space-y-8"
+                        className="bg-stone-100 rounded-2xl shadow-lg p-8 md:p-12 space-y-8"
                     >
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
@@ -195,47 +195,7 @@ export default function TermsOfService() {
 
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                8. Responsabilité
-                            </h2>
-                            <div className="text-gray-700 space-y-4">
-                                <p>
-                                    L&apos;éditeur s&apos;efforce de fournir des
-                                    informations exactes et à jour sur le site.
-                                    Toutefois, il ne peut garantir
-                                    l&apos;exactitude, la complétude ou
-                                    l&apos;actualité des informations diffusées.
-                                </p>
-                                <p>
-                                    L&apos;éditeur ne pourra être tenu
-                                    responsable des dommages directs ou
-                                    indirects résultant de l&apos;utilisation du
-                                    site, notamment :
-                                </p>
-                                <ul className="list-disc list-inside space-y-2 ml-4">
-                                    <li>
-                                        Interruption ou dysfonctionnement du
-                                        site
-                                    </li>
-                                    <li>
-                                        Intrusion informatique ou présence de
-                                        virus
-                                    </li>
-                                    <li>
-                                        Inexactitude ou obsolescence des
-                                        informations
-                                    </li>
-                                    <li>
-                                        Dommages résultant de l&apos;utilisation
-                                        d&apos;informations présentes sur le
-                                        site
-                                    </li>
-                                </ul>
-                            </div>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                9. Données personnelles
+                                8. Données personnelles
                             </h2>
                             <p className="text-gray-700 leading-relaxed">
                                 Les données personnelles collectées sur le site
@@ -253,7 +213,7 @@ export default function TermsOfService() {
 
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                10. Modification des CGU
+                                9. Modification des CGU
                             </h2>
                             <p className="text-gray-700 leading-relaxed">
                                 L&apos;éditeur se réserve le droit de modifier
@@ -267,7 +227,7 @@ export default function TermsOfService() {
 
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                11. Droit applicable et juridiction compétente
+                                10. Droit applicable et juridiction compétente
                             </h2>
                             <p className="text-gray-700 leading-relaxed">
                                 Les présentes CGU sont régies par le droit
@@ -280,7 +240,7 @@ export default function TermsOfService() {
 
                         <section>
                             <h2 className="text-2xl font-bold mb-4 text-gray-900">
-                                12. Contact
+                                11. Contact
                             </h2>
                             <p className="text-gray-700 leading-relaxed">
                                 Pour toute question concernant les présentes
