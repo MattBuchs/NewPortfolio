@@ -67,19 +67,32 @@ export default function Certifications() {
                     </div>
                 </motion.header>
 
-                <div className="max-w-3xl mx-auto">
+                <div className="max-w-3xl mx-auto px-4">
                     {certifications.map((cert, index) => (
                         <motion.article
                             key={cert.id}
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            whileHover={{ scale: 1.02 }}
-                            className="relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{
+                                duration: 0.7,
+                                delay: index * 0.1,
+                                ease: [0.25, 0.1, 0.25, 1],
+                            }}
+                            whileHover={{
+                                y: -8,
+                                transition: { duration: 0.3, ease: "easeOut" },
+                            }}
+                            className="relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 border border-gray-200 overflow-hidden"
                         >
                             {/* Decoration */}
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full -mr-16 -mt-16 opacity-50" />
+                            <motion.div
+                                className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full -mr-16 -mt-16 opacity-50"
+                                initial={{ scale: 0, rotate: 0 }}
+                                whileInView={{ scale: 1, rotate: 180 }}
+                                transition={{ duration: 1, ease: "easeOut" }}
+                                viewport={{ once: true }}
+                            />
 
                             <div className="relative z-10">
                                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
@@ -97,7 +110,7 @@ export default function Certifications() {
                                                 </h3>
                                                 {cert.verified && (
                                                     <CheckCircle2
-                                                        className="text-blue-600"
+                                                        className="text-blue-600 hidden sm:inline-block"
                                                         size={22}
                                                         aria-label="Certification vérifiée"
                                                     />
@@ -111,7 +124,7 @@ export default function Certifications() {
                                             </p>
                                         </div>
                                     </div>
-                                    <span className="inline-flex items-center bg-gradient-to-br from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-md">
+                                    <span className="flex items-center bg-gradient-to-br from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-md">
                                         {cert.year}
                                     </span>
                                 </div>

@@ -307,13 +307,13 @@ export default function Form() {
                 <motion.button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`relative flex justify-center items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-8 py-3 mt-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ${
+                    className={`relative flex justify-center items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-8 py-3 mt-6 rounded-lg shadow-lg transition-all duration-300
+                    will-change-transform origin-center leading-none
+                    ${
                         isSubmitting
                             ? "opacity-80 cursor-not-allowed"
                             : "hover:scale-[1.02] active:scale-[0.98]"
                     }`}
-                    whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                    whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                 >
                     {isSubmitting ? (
                         <>
@@ -354,7 +354,7 @@ export default function Form() {
                                     d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
                                 />
                             </svg>
-                            Envoyer le message
+                            <span>Envoyer le message</span>
                         </>
                     )}
                 </motion.button>
