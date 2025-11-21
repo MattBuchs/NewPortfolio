@@ -2,10 +2,17 @@ import NavBar from "../components/Header/NavBar";
 import Form from "../components/Form/Form";
 import BarLink from "../components/utils/BarLink";
 import Footer from "../components/Footer";
+import SEO from "../components/utils/SEO";
 
 export default function Contact() {
     return (
         <>
+            <SEO
+                title="Me Contacter"
+                description="Contactez Matt Buchs pour vos projets de développement web. Disponible pour des missions freelance et collaborations professionnelles."
+                keywords="contact développeur, embaucher développeur web, freelance, collaboration, mission web"
+                url="https://matt-buchs.me/contact"
+            />
             <NavBar />
             <main>
                 <div className="bg-magic w-full h-screen fixed top-0 -z-10"></div>

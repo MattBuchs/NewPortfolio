@@ -1,0 +1,25 @@
+{
+    "short_name": "Matt Buchs",
+    "name": "Matt Buchs - Développeur Web Full Stack",
+    "description": "Portfolio de Matt Buchs - Développeur Web Full Stack spécialisé en React, Node.js et JavaScript",
+    "icons": [
+        {
+            "src": "/img/Logo-Skroma.jpg",
+            "sizes": "192x192",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "/img/Logo-Skroma.jpg",
+            "sizes": "512x512",
+            "type": "image/jpeg"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "orientation": "portrait-primary",
+    "lang": "fr",
+    "dir": "ltr",
+    "scope": "/"
+}

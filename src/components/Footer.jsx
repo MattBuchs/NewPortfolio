@@ -4,20 +4,35 @@ export default function Footer() {
     return (
         <footer className="bg-slate-800 text-white">
             <div className="max-w-[800px] w-full md:w-11/12 h-full mx-auto pt-6 md:pb-3 flex flex-col md:flex-row md:justify-between">
-                <nav className="pt-2 hidden md:block">
+                <nav
+                    className="pt-2 hidden md:block"
+                    aria-label="Navigation du pied de page"
+                >
                     <ul className="flex flex-col items-center justify-start mx-2 text-lg">
                         <li className="mb-1 w-full">
-                            <Link to="/" className="hover:underline">
+                            <Link
+                                to="/"
+                                className="hover:underline"
+                                aria-label="Aller à la page d'accueil"
+                            >
                                 Accueil
                             </Link>
                         </li>
                         <li className="mb-1 w-full">
-                            <Link to="/projects" className="hover:underline">
+                            <Link
+                                to="/projects"
+                                className="hover:underline"
+                                aria-label="Voir mes projets"
+                            >
                                 Projets
                             </Link>
                         </li>
                         <li className="mb-1 w-full">
-                            <Link to="/contact" className="hover:underline">
+                            <Link
+                                to="/contact"
+                                className="hover:underline"
+                                aria-label="Me contacter"
+                            >
                                 Contact
                             </Link>
                         </li>
@@ -36,12 +51,17 @@ export default function Footer() {
                         &copy; All rights reserved
                     </p>
                 </div>
-                <div className="flex mt-6 md:mt-0 md:mr-2 border-t md:border-0 border-slate-50/30">
+                <div
+                    className="flex mt-6 md:mt-0 md:mr-2 border-t md:border-0 border-slate-50/30"
+                    role="navigation"
+                    aria-label="Liens réseaux sociaux"
+                >
                     <a
                         href="https://github.com/MattBuchs"
                         className="w-full h-full flex justify-center pt-3 mr-1 border-r md:border-r-0 pb-3 md:pb-0 border-slate-50/30"
                         target="_blank"
-                        aria-label="GitHub"
+                        rel="noopener noreferrer"
+                        aria-label="Visiter mon profil GitHub"
                         title="GitHub"
                     >
                         <svg
@@ -61,7 +81,8 @@ export default function Footer() {
                         href="https://www.linkedin.com/in/matt-buchs/"
                         className="w-full h-full flex justify-center pt-3"
                         target="_blank"
-                        aria-label="LinkedIn"
+                        rel="noopener noreferrer"
+                        aria-label="Visiter mon profil LinkedIn"
                         title="LinkedIn"
                     >
                         <svg

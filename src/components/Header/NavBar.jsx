@@ -88,7 +88,7 @@ export default function NavBar({ isProjectPage }) {
                 <h1 className="text-3xl font-semibold underline underline-offset-8 flex items-center">
                     <img
                         src="/img/Logo-Skroma.jpg"
-                        alt=""
+                        alt="Logo de Matt Buchs"
                         className="w-12 h-12 rounded-full hidden sm:inline"
                     />
                     <span className="drop-shadow mt-1 ml-2 font-vibes">
@@ -137,8 +137,12 @@ export default function NavBar({ isProjectPage }) {
 
                     {/* Menu pour les écrans larges */}
                     {!disableParallax && (
-                        <ul className="items-center h-full text-lg flex">
-                            <li className="mr-4">
+                        <ul
+                            className="items-center h-full text-lg flex"
+                            role="menubar"
+                            aria-label="Navigation principale"
+                        >
+                            <li className="mr-4" role="none">
                                 <NavLink
                                     to="/"
                                     className={({ isActive }) =>
@@ -147,11 +151,13 @@ export default function NavBar({ isProjectPage }) {
                                             "underline underline-offset-4"
                                         }`
                                     }
+                                    role="menuitem"
+                                    aria-label="Aller à la page d'accueil"
                                 >
                                     Accueil
                                 </NavLink>
                             </li>
-                            <li className="mr-4">
+                            <li className="mr-4" role="none">
                                 <NavLink
                                     to="/projects"
                                     className={({ isActive }) =>
@@ -160,11 +166,13 @@ export default function NavBar({ isProjectPage }) {
                                             "underline underline-offset-4"
                                         }`
                                     }
+                                    role="menuitem"
+                                    aria-label="Voir mes projets"
                                 >
                                     Projets
                                 </NavLink>
                             </li>
-                            <li>
+                            <li role="none">
                                 <NavLink
                                     to="/contact"
                                     className={({ isActive }) =>
@@ -173,6 +181,8 @@ export default function NavBar({ isProjectPage }) {
                                             "underline underline-offset-4"
                                         }`
                                     }
+                                    role="menuitem"
+                                    aria-label="Me contacter"
                                 >
                                     Contact
                                 </NavLink>
@@ -202,13 +212,17 @@ export default function NavBar({ isProjectPage }) {
                             initial="hidden"
                             animate="visible"
                             exit="exit"
+                            role="dialog"
+                            aria-modal="true"
+                            aria-label="Menu de navigation mobile"
                         >
-                            <div
-                                className="flex justify-center pt-3 pb-4"
+                            <button
+                                className="flex justify-center pt-3 pb-4 w-full"
                                 onClick={() => setToggle(false)}
+                                aria-label="Fermer le menu"
                             >
                                 <div className="w-16 h-1 bg-gray-300 rounded-full" />
-                            </div>
+                            </button>
 
                             <motion.h3
                                 className="text-center text-2xl font-semibold mb-4"
@@ -217,17 +231,22 @@ export default function NavBar({ isProjectPage }) {
                                     opacity: 1,
                                     transition: { delay: 0.2 },
                                 }}
+                                id="mobile-menu-title"
                             >
                                 Menu
                             </motion.h3>
 
-                            <div className="p-6">
-                                <ul className="space-y-1">
+                            <nav
+                                className="p-6"
+                                aria-labelledby="mobile-menu-title"
+                            >
+                                <ul className="space-y-1" role="menu">
                                     <motion.li
                                         custom={0}
                                         variants={menuItemVariants}
                                         initial="hidden"
                                         animate="visible"
+                                        role="none"
                                     >
                                         <NavLink
                                             to="/"
@@ -239,6 +258,8 @@ export default function NavBar({ isProjectPage }) {
                                                 }`
                                             }
                                             onClick={() => setToggle(false)}
+                                            role="menuitem"
+                                            aria-label="Aller à la page d'accueil"
                                         >
                                             Accueil
                                         </NavLink>
@@ -248,6 +269,7 @@ export default function NavBar({ isProjectPage }) {
                                         variants={menuItemVariants}
                                         initial="hidden"
                                         animate="visible"
+                                        role="none"
                                     >
                                         <NavLink
                                             to="/projects"
@@ -259,6 +281,8 @@ export default function NavBar({ isProjectPage }) {
                                                 }`
                                             }
                                             onClick={() => setToggle(false)}
+                                            role="menuitem"
+                                            aria-label="Voir mes projets"
                                         >
                                             Projets
                                         </NavLink>
@@ -268,6 +292,7 @@ export default function NavBar({ isProjectPage }) {
                                         variants={menuItemVariants}
                                         initial="hidden"
                                         animate="visible"
+                                        role="none"
                                     >
                                         <NavLink
                                             to="/contact"
@@ -279,12 +304,14 @@ export default function NavBar({ isProjectPage }) {
                                                 }`
                                             }
                                             onClick={() => setToggle(false)}
+                                            role="menuitem"
+                                            aria-label="Me contacter"
                                         >
                                             Contact
                                         </NavLink>
                                     </motion.li>
                                 </ul>
-                            </div>
+                            </nav>
                         </motion.div>
                     </>
                 )}

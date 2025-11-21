@@ -121,12 +121,14 @@ export default function Form() {
                         <button
                             className="ml-auto text-green-500 hover:text-green-700"
                             onClick={() => setSuccessMessage(false)}
+                            aria-label="Fermer la notification"
                         >
                             <svg
                                 className="w-5 h-5"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
+                                aria-hidden="true"
                             >
                                 <path
                                     strokeLinecap="round"
@@ -140,12 +142,21 @@ export default function Form() {
                 )}
             </AnimatePresence>
 
-            <form className="px-2 lg:px-14 py-6" onSubmit={handleSubmit}>
+            <form
+                className="px-2 lg:px-14 py-6"
+                onSubmit={handleSubmit}
+                aria-label="Formulaire de contact"
+            >
                 <div className="flex flex-col md:flex-row md:justify-between">
                     <div className="block md:w-[48%] mt-2">
                         <div>
                             <label htmlFor="last-name">Nom</label>
-                            <span className="ml-1 text-red-600">*</span>
+                            <span
+                                className="ml-1 text-red-600"
+                                aria-label="requis"
+                            >
+                                *
+                            </span>
                         </div>
                         <input
                             type="text"
@@ -155,6 +166,8 @@ export default function Form() {
                             onChange={handleChange}
                             className="border border-black h-10 w-full rounded px-2"
                             required
+                            aria-required="true"
+                            aria-describedby="required-fields"
                         />
                     </div>
                     <div className="md:w-[48%] mt-2">
@@ -175,7 +188,12 @@ export default function Form() {
                     <div className="md:w-[48%] mt-2">
                         <div className="block">
                             <label htmlFor="email">Email</label>
-                            <span className="ml-1 text-red-600">*</span>
+                            <span
+                                className="ml-1 text-red-600"
+                                aria-label="requis"
+                            >
+                                *
+                            </span>
                         </div>
                         <input
                             type="email"
@@ -185,6 +203,8 @@ export default function Form() {
                             onChange={handleChange}
                             className="border border-black h-10 w-full rounded px-2"
                             required
+                            aria-required="true"
+                            aria-describedby="required-fields"
                         />
                     </div>
                     <div className="md:w-[48%] mt-2">
@@ -215,7 +235,9 @@ export default function Form() {
                 <div className="mt-2">
                     <div className="block">
                         <label htmlFor="message">Message</label>
-                        <span className="ml-1 text-red-600">*</span>
+                        <span className="ml-1 text-red-600" aria-label="requis">
+                            *
+                        </span>
                     </div>
                     <textarea
                         name="message"
@@ -224,10 +246,15 @@ export default function Form() {
                         onChange={handleChange}
                         className="resize-none border border-black rounded w-full h-32 px-2 py-1"
                         required
+                        aria-required="true"
+                        aria-describedby="required-fields"
                     ></textarea>
                 </div>
 
-                <small className="text-red-600 italic text-xs block mt-0.5">
+                <small
+                    id="required-fields"
+                    className="text-red-600 italic text-xs block mt-0.5"
+                >
                     * Champ obligatoire
                 </small>
                 {errorMessage && (
@@ -235,6 +262,8 @@ export default function Form() {
                         className="text-red-600 mt-2 px-3 py-2 bg-red-50 rounded border border-red-100"
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
+                        role="alert"
+                        aria-live="assertive"
                     >
                         {errorMessage}
                     </motion.p>
