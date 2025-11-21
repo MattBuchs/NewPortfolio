@@ -150,13 +150,12 @@ export default function Form() {
                 <div className="flex flex-col md:flex-row md:justify-between">
                     <div className="block md:w-[48%] mt-2">
                         <div>
-                            <label htmlFor="last-name">Nom</label>
-                            <span
-                                className="ml-1 text-red-600"
-                                aria-label="requis"
+                            <label
+                                htmlFor="last-name"
+                                className="text-gray-700 font-medium mb-1.5"
                             >
-                                *
-                            </span>
+                                Nom
+                            </label>
                         </div>
                         <input
                             type="text"
@@ -164,36 +163,44 @@ export default function Form() {
                             name="lastName"
                             value={formData.lastName}
                             onChange={handleChange}
-                            className="border border-black h-10 w-full rounded px-2"
+                            className="border-2 border-gray-300 h-11 w-full rounded-lg px-4 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
                             required
                             aria-required="true"
                             aria-describedby="required-fields"
                         />
                     </div>
                     <div className="md:w-[48%] mt-2">
-                        <label htmlFor="first-name" className="block">
+                        <label
+                            htmlFor="first-name"
+                            className="text-gray-700 font-medium mb-1.5"
+                        >
                             Prénom
                         </label>
+                        <span
+                            className="ml-1 text-gray-500 text-xs"
+                            aria-label="requis"
+                        >
+                            (optionnel)
+                        </span>
                         <input
                             type="text"
                             id="first-name"
                             name="firstName"
                             value={formData.firstName}
                             onChange={handleChange}
-                            className="border border-black h-10 w-full rounded px-2"
+                            className="border-2 border-gray-300 h-11 w-full rounded-lg px-4 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
                         />
                     </div>
                 </div>
                 <div className="flex flex-col md:flex-row md:justify-between">
                     <div className="md:w-[48%] mt-2">
                         <div className="block">
-                            <label htmlFor="email">Email</label>
-                            <span
-                                className="ml-1 text-red-600"
-                                aria-label="requis"
+                            <label
+                                htmlFor="email"
+                                className="text-gray-700 font-medium mb-1.5"
                             >
-                                *
-                            </span>
+                                Email
+                            </label>
                         </div>
                         <input
                             type="email"
@@ -201,79 +208,112 @@ export default function Form() {
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="border border-black h-10 w-full rounded px-2"
+                            className="border-2 border-gray-300 h-11 w-full rounded-lg px-4 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
                             required
                             aria-required="true"
                             aria-describedby="required-fields"
                         />
                     </div>
                     <div className="md:w-[48%] mt-2">
-                        <label htmlFor="phone" className="block">
+                        <label
+                            htmlFor="phone"
+                            className="text-gray-700 font-medium mb-1.5"
+                        >
                             Téléphone
                         </label>
+                        <span
+                            className="ml-1 text-gray-500 text-xs"
+                            aria-label="requis"
+                        >
+                            (optionnel)
+                        </span>
                         <input
                             type="tel"
                             id="phone"
                             name="phone"
                             value={formData.phone}
                             onChange={handleChange}
-                            className="border border-black h-10 w-full rounded px-2"
+                            className="border-2 border-gray-300 h-11 w-full rounded-lg px-4 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
                         />
                     </div>
                 </div>
                 <div className="mt-2">
-                    <label htmlFor="society">Société</label>
+                    <label
+                        htmlFor="society"
+                        className="text-gray-700 font-medium mb-1.5"
+                    >
+                        Société
+                    </label>
+                    <span
+                        className="ml-1 text-gray-500 text-xs"
+                        aria-label="requis"
+                    >
+                        (optionnel)
+                    </span>
                     <input
                         type="text"
                         id="society"
                         name="society"
                         value={formData.society}
                         onChange={handleChange}
-                        className="border border-black h-10 w-full rounded px-2"
+                        className="border-2 border-gray-300 h-11 w-full rounded-lg px-4 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
                     />
                 </div>
                 <div className="mt-2">
                     <div className="block">
-                        <label htmlFor="message">Message</label>
-                        <span className="ml-1 text-red-600" aria-label="requis">
-                            *
-                        </span>
+                        <label
+                            htmlFor="message"
+                            className="text-gray-700 font-medium mb-1.5"
+                        >
+                            Message
+                        </label>
                     </div>
                     <textarea
                         name="message"
                         id="message"
                         value={formData.message}
                         onChange={handleChange}
-                        className="resize-none border border-black rounded w-full h-32 px-2 py-1"
+                        className="resize-none border-2 border-gray-300 rounded-lg w-full h-32 px-4 py-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
                         required
                         aria-required="true"
                         aria-describedby="required-fields"
                     ></textarea>
                 </div>
 
-                <small
-                    id="required-fields"
-                    className="text-red-600 italic text-xs block mt-0.5"
-                >
-                    * Champ obligatoire
-                </small>
                 {errorMessage && (
-                    <motion.p
-                        className="text-red-600 mt-2 px-3 py-2 bg-red-50 rounded border border-red-100"
+                    <motion.div
+                        className="mt-4 px-4 py-3 bg-red-50 rounded-lg border-l-4 border-red-500 flex items-start"
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         role="alert"
                         aria-live="assertive"
                     >
-                        {errorMessage}
-                    </motion.p>
+                        <svg
+                            className="w-5 h-5 text-red-500 mr-3 flex-shrink-0 mt-0.5"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                        >
+                            <path
+                                fillRule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                                clipRule="evenodd"
+                            />
+                        </svg>
+                        <p className="text-red-700 text-sm font-medium">
+                            {errorMessage}
+                        </p>
+                    </motion.div>
                 )}
-                <button
+                <motion.button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`relative flex justify-center items-center bg-blue-800 text-white font-semibold px-8 py-2 mt-4 rounded shadow hover:bg-blue-900 transition-all duration-300 ${
-                        isSubmitting ? "opacity-80" : "hover:scale-[0.98]"
+                    className={`relative flex justify-center items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold px-8 py-3 mt-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ${
+                        isSubmitting
+                            ? "opacity-80 cursor-not-allowed"
+                            : "hover:scale-[1.02] active:scale-[0.98]"
                     }`}
+                    whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                    whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                 >
                     {isSubmitting ? (
                         <>
@@ -300,9 +340,24 @@ export default function Form() {
                             Envoi en cours...
                         </>
                     ) : (
-                        "Envoyer"
+                        <>
+                            <svg
+                                className="w-5 h-5 mr-2 rotate-45"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                                />
+                            </svg>
+                            Envoyer le message
+                        </>
                     )}
-                </button>
+                </motion.button>
             </form>
         </div>
     );

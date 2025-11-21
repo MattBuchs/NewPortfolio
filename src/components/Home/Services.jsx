@@ -66,16 +66,14 @@ export default function Services() {
                     viewport={{ once: true, amount: 0.5 }}
                     variants={headerVariants}
                 >
-                    <h2 className="text-3xl text-center font-semibold">
-                        Services
-                    </h2>
+                    <h2 className="text-3xl text-center font-bold">Services</h2>
                     <div className="flex justify-center mt-6 relative">
                         <motion.span
                             className="w-10 h-10 border border-gray-300 rounded-full p-2.5 bg-gray-100"
                             variants={iconVariants}
                             whileHover="hover"
                         >
-                            <ClipboardList className="w-full h-full" />
+                            <ClipboardList className="w-full h-full text-blue-700" />
                         </motion.span>
                         <hr
                             className="h-0.5 w-2/5 absolute mt-[18px] -z-10"

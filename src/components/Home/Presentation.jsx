@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import BarLink from "../utils/BarLink";
+import DownloadCV from "../utils/DownloadCV";
 import "./Card.css";
 
 export default function Presentation() {
@@ -174,6 +175,13 @@ export default function Presentation() {
                         m&apos;efforce de proposer des solutions innovantes et
                         adaptées aux besoins spécifiques de chaque client.
                     </motion.p>
+
+                    <motion.div
+                        className="mt-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center"
+                        variants={itemVariants}
+                    >
+                        <DownloadCV />
+                    </motion.div>
                 </motion.article>
                 <div className="w-[70%] min-w-[200px] sm:w-[45%] lg:w-1/2 -ml-6 sm:-ml-0 relative flex justify-center">
                     <motion.div

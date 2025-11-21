@@ -78,16 +78,14 @@ export default function Technos() {
                     viewport={{ once: true, amount: 0.5 }}
                     variants={headerVariants}
                 >
-                    <h2 className="text-3xl text-center font-semibold">
-                        Technos
-                    </h2>
+                    <h2 className="text-3xl text-center font-bold">Technos</h2>
                     <div className="flex justify-center mt-6 relative">
                         <motion.span
                             className="w-10 h-10 border border-gray-300 rounded-full p-2.5 bg-gray-100"
                             variants={iconVariants}
                             whileHover="hover"
                         >
-                            <Layers className="w-full h-full" />
+                            <Layers className="w-full h-full text-blue-700" />
                         </motion.span>
                         <hr
                             className="h-0.5 w-2/5 absolute mt-[18px] -z-10"

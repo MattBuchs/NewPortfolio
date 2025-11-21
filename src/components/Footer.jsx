@@ -45,11 +45,33 @@ export default function Footer() {
                         className="w-16 h-16 rounded-full mb-6"
                     />
                     <p className="text-base">By Matt.</p>
-                    <p className="">
+                    <p className="mb-3">
                         matt-buchs.me - {new Date().getFullYear()}
                         <br />
                         &copy; All rights reserved
                     </p>
+                    <nav className="flex flex-wrap justify-center gap-3 text-xs text-slate-300">
+                        <Link
+                            to="/mentions-legales"
+                            className="hover:underline hover:text-white"
+                        >
+                            Mentions légales
+                        </Link>
+                        <span>•</span>
+                        <Link
+                            to="/politique-confidentialite"
+                            className="hover:underline hover:text-white"
+                        >
+                            Confidentialité
+                        </Link>
+                        <span>•</span>
+                        <Link
+                            to="/conditions-utilisation"
+                            className="hover:underline hover:text-white"
+                        >
+                            CGU
+                        </Link>
+                    </nav>
                 </div>
                 <div
                     className="flex mt-6 md:mt-0 md:mr-2 border-t md:border-0 border-slate-50/30"

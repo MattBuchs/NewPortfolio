@@ -6,6 +6,9 @@ const Home = lazy(() => import("./pages/Home"));
 const Projects = lazy(() => import("./pages/Projects"));
 const Project = lazy(() => import("./pages/Project"));
 const Contact = lazy(() => import("./pages/Contact"));
+const LegalNotice = lazy(() => import("./pages/LegalNotice"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const Error = lazy(() => import("./pages/Error"));
 
 function App() {
@@ -23,6 +26,15 @@ function App() {
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/project/:slug" element={<Project />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/mentions-legales" element={<LegalNotice />} />
+                    <Route
+                        path="/politique-confidentialite"
+                        element={<PrivacyPolicy />}
+                    />
+                    <Route
+                        path="/conditions-utilisation"
+                        element={<TermsOfService />}
+                    />
                     <Route path="*" element={<Error />} />
                 </Routes>
             </Suspense>
